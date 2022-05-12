@@ -681,6 +681,7 @@ module Aws
       # and may just be credential like Client response objects
       # (eg those returned by sts#assume_role)
       def credentials_set?(credentials)
+        puts "DAVID: credentials_set? in sigv4 gem"
         !credentials.access_key_id.nil? &&
           !credentials.access_key_id.empty? &&
           !credentials.secret_access_key.nil? &&
